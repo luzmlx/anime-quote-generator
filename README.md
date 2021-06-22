@@ -44,7 +44,8 @@ https://wireframe.cc/vU0buA
 - Flexbox styles
 - Media Query for different screen size
 - Add Search bar to search quotes from specific characters
-- Add Second API
+- Call API by Character Name
+- Render Quotes by Character Name
 
 #### PostMVP
 
@@ -86,7 +87,7 @@ https://ibb.co/ck9Fdv3
 | Working with API | H | 3hrs|  |  |
 | Advanced Styling | H | 1.5hrs|  |  |
 | Add Images to Webpage | H | 2hrs|  |  |
-| Working with second API | H | 3hrs|  |  |
+| Render Quotes by Character Name | H | 3hrs|  |  |
 | Create Functional Search Button | H | 2hrs|  |  |
 | Write Function to Clear Previous Output | H | 2.5hrs|  |  |
 | POST MVP: Style Random Quote Button | L | 1hrs|  |  |
