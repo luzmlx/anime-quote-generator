@@ -11,7 +11,7 @@ This website will generate a random Anime Quote once you click the button. If yo
 
 ## API and Data Sample
 
-
+(For Random Quote)
 https://animechan.vercel.app/api/random 
 ```
 { "anime": "07 Ghost",
@@ -19,6 +19,15 @@ https://animechan.vercel.app/api/random
     "quote": "Don’t allow hatred to devour your heart. The one that you care for will only move farther away." 
     }
 ```
+(Search Quote by Anime Character, data sample includes quote from naruto)
+https://animechan.vercel.app/api/quotes/character?name=naruto 
+```
+{
+        "anime": "Boruto: Naruto Next Generations",
+        "character": "Naruto Uzumaki",
+        "quote": "The many lives lost during long years of conflict... because of those selfless sacrifices, we are able to bathe in peace and prosperity now. To ingrain this history within the new generation will be a vital cog in helping to maintain the peace."
+    }
+  ```
 ## Wireframes
 
 
@@ -67,7 +76,7 @@ https://ibb.co/ck9Fdv3
 | Add CSS Font | H | 1hrs|  |  |
 | Add Background Image | H | .5hrs|  |  |
 | PseudoCode | H | 2hrs|  |  |
-| Functional Button | H | 1hrs|  |  |
+| Functional Button | H | 1.5hrs|  |  |
 | Flexbox | H | 2hrs|  |  |
 | Axios/Rendering | H | 2hrs|  |  |
 | Media Query | H | 2hrs|  |  |
@@ -77,7 +86,7 @@ https://ibb.co/ck9Fdv3
 | Working with second API | H | 3hrs|  |  |
 | Create Functional Search Button | H | 2hrs|  |  |
 | Write Function to Clear Previous Output | H | 2.5hrs|  |  |
-| Total | H | 30.5hrs|  |  |
+| Total | H | 30hrs|  |  |
 
 ## Code Snippet
 
