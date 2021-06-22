@@ -3,7 +3,8 @@
 /* Button and Search bar are next to each other */
 /* Content is centered in background */
 /* Add Font styles to text */
-/* Media Queiry so Page looks good on different screens */
+/* Media Queiry so Page looks good on different screens. 
+    Don't add side images. Maybe image on bottom or header?*/
 body {
   background-color: bisque;
 }
