@@ -54,7 +54,7 @@ https://wireframe.cc/vU0buA
 ## Priority Matrix
 
 
-https://ibb.co/MR4DQjW 
+https://ibb.co/ck9Fdv3
 
 ## Timeframes
 
