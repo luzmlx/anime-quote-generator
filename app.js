@@ -5,21 +5,41 @@
 // 
 
 const URL = 'https://animechan.vercel.app/api/random'
-const searchURL = `https://animechan.vercel.app/api/quotes/character?name=`
+// const searchURL = `https://animechan.vercel.app/api/quotes/character?name=${searchButton.value}`
 
 let characterSearch = document.querySelector('#search-name')
 let randomSearch = document.querySelector('#random')
 let searchButton = document.querySelector('input')
 let quoteData = document.querySelector('.quotes')
 
-function quotes() {
-  console.log(searchButton.value)
-  characterQuote(searchButton)
-}
-let characterQuote = async (searchButton) => {
-  try {
-    characterQuote = await axios.get(`${searchURL}$s=${searchButton.value}`)
-  } catch (error) {
-    console.log(error)
-  }
-}
+let randomQuote = () => {
+  axios.get(`${URL}`)
+    .then(response => {
+      console.log(response)
+    });
+};
+
+randomSearch.addEventListener('click', randomQuote)
+
+// function quotes() {
+//   console.log(searchButton.value)
+//   characterQuote(searchButton)
+// }
+// let characterQuote = async () => {
+//   try {
+//     const searchURL = `https://animechan.vercel.app/api/quotes/character?name=${searchButton.value}`
+//     characterQuote = await axios.get(`${searchURL}`)
+//     console.log(characterQuote.data.search)
+//     renderList(characterQuote.data.search)
+//   } catch (error) {
+//     console.log(error)
+//   }
+// }
+
+// function renderQuote(quote) {
+//   for (let i = 0; i < quote.length; i++) {
+     
+//   }
+// }
+
+// characterSearch.addEventListener('click',  searchButton)
