@@ -36,8 +36,7 @@ p {
 
 #random {
   display: flex;
-  justify-content: flex-end;
-  align-items:flex-end;
+  justify-content: flex-start;
 
 }
 

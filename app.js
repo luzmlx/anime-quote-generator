@@ -5,43 +5,59 @@
 // 
 
 const URL = 'https://animechan.vercel.app/api/random'
-const searchURL = `https://animechan.vercel.app/api/quotes/character?name=`
+const searchURL = `https://animechan.vercel.app/api/quotes/`
 
 let characterSearch = document.querySelector('#search-name')
 let randomSearch = document.querySelector('#random')
 let searchButton = document.querySelector('input')
 let quoteData = document.querySelector('section')
 
-// let randomQuote = async () => {
-//   try { 
-//   axios.get(`${URL}`)
-//     .then(response => {
-//       console.log(response)
-//       // const randomQuoteText = document.createElement('h1')
-//       // randomQuoteText.textContent = randomQuote.data
-//       // quoteData.append(randomQuoteText)
-//     });
-//   } catch (error) {
-//     console.error(error)
-// }
-// };
+let randomQuote = async () => {
+  try { 
+   await axios.get(`${URL}`)
+      .then(response => {
+        console.log(response)
+        return response;
+      
+        // const randomQuoteText = document.createElement('h1')
+        // randomQuoteText.textContent = randomQuote.data
+        // quoteData.append(randomQuoteText)
+      });
+    // renderRdQuote(randomQuote.data)
+  } catch (error) {
+    console.error(error)
+}
+};
 
 
 // function renderRdQuote(random) {
 //   for (let i = 0; i < random.length; i++) {
 //     const randomQuoteText = document.createElement('p')
-//     randomQuoteText.textContent = random[i].anime
+//     randomQuoteText.textContent = random.data.anime
 //     quoteData.append(randomQuoteText)
 //   }
 // }
 
+// function fetchCharaterQuote() {
+//   fetch(`${searchURL}character?name=${searchButton.value}`)
+//     .then(response => {
+//       console.log(response)
+//       return response.json();
+//     })
+//     .then(data => {
+//     console.log(data.anime)
+//     }).catch(error => {
+//     console.log(error)
+//   })
+// }
+
+
 let characterName = async () => {
   try {
-    axios.get(`${searchURL}&s=${searchButton.value}`)
+   await axios.get(`${searchURL}`)
       .then(response => {
-        console.log(response)
+      console.log(response)
     })
-    
   } catch (error) {
     console.error(error)
   }
@@ -57,8 +73,12 @@ let characterName = async () => {
 //     quoteData.append(randomQuote)
 // //   }
 // }
-// randomSearch.addEventListener('click', randomQuote)
+randomSearch.addEventListener('click', randomQuote)
 characterSearch.addEventListener('click', characterName)
+
+
+
+// function quotes() {
 //   console.log(searchButton.value)
 //   characterQuote(searchButton)
 // }
