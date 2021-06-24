@@ -5,23 +5,60 @@
 // 
 
 const URL = 'https://animechan.vercel.app/api/random'
-// const searchURL = `https://animechan.vercel.app/api/quotes/character?name=${searchButton.value}`
+const searchURL = `https://animechan.vercel.app/api/quotes/character?name=`
 
 let characterSearch = document.querySelector('#search-name')
 let randomSearch = document.querySelector('#random')
 let searchButton = document.querySelector('input')
-let quoteData = document.querySelector('.quotes')
+let quoteData = document.querySelector('section')
 
-let randomQuote = () => {
-  axios.get(`${URL}`)
-    .then(response => {
-      console.log(response)
-    });
-};
+// let randomQuote = async () => {
+//   try { 
+//   axios.get(`${URL}`)
+//     .then(response => {
+//       console.log(response)
+//       // const randomQuoteText = document.createElement('h1')
+//       // randomQuoteText.textContent = randomQuote.data
+//       // quoteData.append(randomQuoteText)
+//     });
+//   } catch (error) {
+//     console.error(error)
+// }
+// };
 
-randomSearch.addEventListener('click', randomQuote)
 
-// function quotes() {
+// function renderRdQuote(random) {
+//   for (let i = 0; i < random.length; i++) {
+//     const randomQuoteText = document.createElement('p')
+//     randomQuoteText.textContent = random[i].anime
+//     quoteData.append(randomQuoteText)
+//   }
+// }
+
+let characterName = async () => {
+  try {
+    axios.get(`${searchURL}&s=${searchButton.value}`)
+      .then(response => {
+        console.log(response)
+    })
+    
+  } catch (error) {
+    console.error(error)
+  }
+}
+// quoteData.append(randomQuote)
+
+
+
+// function renderRandomQuote(randomQuote) {
+//   for (let i = 0; i < randomQuote.length; i++) {
+//     const randomQuoteText = document.createElement('div')
+//     randomQuoteText.textContent = randomQuote.response
+//     quoteData.append(randomQuote)
+// //   }
+// }
+// randomSearch.addEventListener('click', randomQuote)
+characterSearch.addEventListener('click', characterName)
 //   console.log(searchButton.value)
 //   characterQuote(searchButton)
 // }
