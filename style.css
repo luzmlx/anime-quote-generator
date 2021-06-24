@@ -25,14 +25,8 @@ section {
 form {
   display: flex;
 }
-.quotes{
-  background-color: lightslategray;
-}
-p {
-  background-color: mediumaquamarine;
-  height: 200px;
 
-}
+
 
 #random {
   display: flex;
@@ -42,10 +36,14 @@ p {
 
 #footer-content { 
   background-color: lightblue;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
 }
 
-
+@media screen and (min-width:480px) {
+  img {
+    display: none;
+  }
+}
 

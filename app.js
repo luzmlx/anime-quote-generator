@@ -5,98 +5,88 @@
 // 
 
 const URL = 'https://animechan.vercel.app/api/random'
-const searchURL = `https://animechan.vercel.app/api/quotes/`
+// const searchURL = `https://animechan.vercel.app/api/quotes/character?name=`
 
 let characterSearch = document.querySelector('#search-name')
 let randomSearch = document.querySelector('#random')
-let searchButton = document.querySelector('input')
-let quoteData = document.querySelector('section')
+// let input = document.querySelector('input')
+// let searchValue = input.value
+let form = document.querySelector('form')
+let section = document.querySelector('section')
 
-let randomQuote = async () => {
-  try { 
-   await axios.get(`${URL}`)
-      .then(response => {
-        console.log(response)
-        return response;
-      
-        // const randomQuoteText = document.createElement('h1')
-        // randomQuoteText.textContent = randomQuote.data
-        // quoteData.append(randomQuoteText)
-      });
-    // renderRdQuote(randomQuote.data)
+const randomQuote = async () => {
+  try {
+    const response = await axios.get(`${URL}`)
+    console.log(response)
+    // createQuoteDiv
+    let quoteDiv = document.createElement('div')
+    section.append(quoteDiv)
+    // Append QuoteDiv to section
+    const anime = document.createElement('p')
+    anime.textContent = `Anime: ${response.data.anime}`
+    // Append anime to QuoteDiv
+    quoteDiv.append(anime)
+
+  // Append Character and Quote
+    const animeCharacter = document.createElement('p')
+    animeCharacter.textContent = `Character: ${response.data.character}`
+    quoteDiv.append(animeCharacter)
+
+    // Append Quote
+    const getAnimeQuote = document.createElement('p')
+    getAnimeQuote.textContent = `"${response.data.quote}"`
+    quoteDiv.append(getAnimeQuote)
+   
+    
+    return response
   } catch (error) {
     console.error(error)
 }
 };
 
 
-// function renderRdQuote(random) {
-//   for (let i = 0; i < random.length; i++) {
-//     const randomQuoteText = document.createElement('p')
-//     randomQuoteText.textContent = random.data.anime
-//     quoteData.append(randomQuoteText)
-//   }
-// }
-
-// function fetchCharaterQuote() {
-//   fetch(`${searchURL}character?name=${searchButton.value}`)
-//     .then(response => {
-//       console.log(response)
-//       return response.json();
-//     })
-//     .then(data => {
-//     console.log(data.anime)
-//     }).catch(error => {
-//     console.log(error)
-//   })
-// }
+// Include verb in functions
 
 
-let characterName = async () => {
+const inputCharacterName = async (searchValue) => {
+  console.log(searchValue)
   try {
-   await axios.get(`${searchURL}`)
-      .then(response => {
-      console.log(response)
-    })
+   const response = await axios.get(`https://animechan.vercel.app/api/quotes/character?name=${searchValue}`)
+    console.log(response)
+    getAnimeData(response.data)
+   
+   
+    return response
   } catch (error) {
     console.error(error)
   }
 }
-// quoteData.append(randomQuote)
+const getAnimeData = (quoteArray) => {
+  for (let i = 0; i < quoteArray.length; i++) {
+    let quoteDiv = document.createElement('div')
+    section.append(quoteDiv)
+    const animeName = document.createElement('p')
+    animeName.textContent = `Anime: ${quoteArray[i].anime}`
+    quoteDiv.append(animeName)
+    // Append Character Name and quote
+    const characterName = document.createElement('p')
+    characterName.textContent = `"Character: ${quoteArray[i].character}`
+    quoteDiv.append(characterName)
+    // Append Quote
+    const characterQuote = document.createElement('p')
+    characterQuote.textContent = `"${quoteArray[i].quote}"`
+    quoteDiv.append(characterQuote)
+  }
+}
 
 
 
-// function renderRandomQuote(randomQuote) {
-//   for (let i = 0; i < randomQuote.length; i++) {
-//     const randomQuoteText = document.createElement('div')
-//     randomQuoteText.textContent = randomQuote.response
-//     quoteData.append(randomQuote)
-// //   }
-// }
 randomSearch.addEventListener('click', randomQuote)
-characterSearch.addEventListener('click', characterName)
+form.addEventListener('submit', (e) => {
+  e.preventDefault()
+  const searchValue = document.querySelector('input').value
+  inputCharacterName(searchValue)
+})
 
 
 
-// function quotes() {
-//   console.log(searchButton.value)
-//   characterQuote(searchButton)
-// }
-// let characterQuote = async () => {
-//   try {
-//     const searchURL = `https://animechan.vercel.app/api/quotes/character?name=${searchButton.value}`
-//     characterQuote = await axios.get(`${searchURL}`)
-//     console.log(characterQuote.data.search)
-//     renderList(characterQuote.data.search)
-//   } catch (error) {
-//     console.log(error)
-//   }
-// }
-
-// function renderQuote(quote) {
-//   for (let i = 0; i < quote.length; i++) {
-     
-//   }
-// }
-
-// characterSearch.addEventListener('click',  searchButton)
