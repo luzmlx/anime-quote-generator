@@ -78,6 +78,12 @@ const getAnimeData = (quoteArray) => {
     quoteDiv.append(characterQuote)
   }
 }
+// when search remove last
+// function remove() {
+//   while (randomQuote.lastChild) {
+//     randomQuote.removeChild(randomQuote.lastChild)
+//   }
+// }
 
 
 

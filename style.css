@@ -6,44 +6,123 @@
 /* Media Queiry so Page looks good on different screens. 
     Don't add side images. Maybe image on bottom or header?*/
 
-  header {
-      background-color: burlywood;
+header {
+      background-image: url(https://i.imgur.com/PlISmTX.png);
       width: auto;
       height: 100px;
       display: flex;
       justify-content: center;
       align-items: center;
+      font-size: 35px;
+      font-style: italic;
+      padding-top: auto;
+      color:white;
     }
+
 body {
   background-color: bisque;
   text-align: center;
+  /* margin-left: auto; */
+  margin: auto
 }
 
+form {
+  overflow:hidden;
+  background-color: #4a35a8;
+  float: right;
+  padding: 6px;
+  margin-top: auto;
+  margin-right: auto;
+  border-style: solid;
+  width: 1000px;
+}
+h2{
+display: flex;
+align-items: flex-start;
+margin-right: 50px;
+padding-right: 10px;
+border-style: solid;
+position: relative;
+top: 37px;
+}
 section {
   text-align: center;
+  border-style: solid;
+  position: relative;
+  top: 50px;
+
 }
-form {
-  display: flex;
+
+
+
+p {
+  text-decoration: blue;
 }
-
-
-
+#search-name {
+  position: fixed;
+  left: 150px;
+  /* bottom: 21px; */
+}
 #random {
   display: flex;
-  justify-content: flex-start;
-
+  justify-content: center;
+  border-style: solid;
+  position: fixed;
+  left: 480px;
+  top: 35px;
+  
 }
 
 #footer-content { 
-  background-color: lightblue;
+  background-color: #5D3FD3;
+  color:cornsilk;
   position: fixed;
   bottom: 0;
   width: 100%;
 }
 
-@media screen and (min-width:480px) {
+
+@media screen and (max-width: 480px) {
   img {
     display: none;
+  }
+  header {
+    position: relative;
+    background-image: url(https://i.imgur.com/PlISmTX.png);
+      width: fit-content;
+      font-size: 15px;
+  }
+h2 {
+display: flex;
+align-items: flex-start;
+justify-content: flex-start;
+
+}
+  body {
+    background-color: chocolate;
+    text-align: center;
+    width: 153px;
+    margin: auto
+    }
+  
+  section {
+    width: 150px;
+  }
+  footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    position: fixed;
+    /* right: 450px; */
+    /* width: 150px; */
+    /* text-align: center; */
+  }
+  #random {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    border-style: solid;
+   
   }
 }
 

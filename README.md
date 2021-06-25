@@ -74,21 +74,21 @@ https://ibb.co/ck9Fdv3
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Create HTML, JS, CSS sheets and complete needed integrations | H | 1hrs|  |  |
-| HTML content | H | 2hrs|  |  |
-| CSS Styling | H | 2hrs|  |  |
-| Add CSS Font | H | 1hrs|  |  |
-| Add Background Image | H | .5hrs|  |  |
+| Create HTML, JS, CSS sheets and complete needed integrations | H | 1hrs| 1hr | 1hr |
+| HTML content | H | 2hrs| 2.5hrs | 2.5hrs |
+| CSS Styling | H | 2hrs| 4hrs | 4hrs |
+| Add CSS Font | H | 1hrs| .5hrs | .5hrs |
+| Add Background Image | H | .5hrs| 1.5hrs | 1.5hrs |
 | PseudoCode | H | 2hrs|  |  |
-| Functional Button | H | 1.5hrs|  |  |
-| Flexbox | H | 2hrs|  |  |
-| Axios/Rendering | H | 2hrs|  |  |
+| Functional Button | H | 1.5hrs| 1.5hrs |  |
+| Flexbox | H | 2hrs| 1hrs |  |
+| Axios/Rendering | H | 2hrs| 4hrs |  |
 | Media Query | H | 2hrs|  |  |
-| Working with API | H | 3hrs|  |  |
+| Working with API | H | 3hrs| 6hrs |  |
 | Advanced Styling | H | 1.5hrs|  |  |
 | Add Images to Webpage | H | 2hrs|  |  |
 | Render Quotes by Character Name | H | 3hrs|  |  |
-| Create Functional Search Button | H | 2hrs|  |  |
+| Create Functional Search Button | H | 2hrs| 3hrs |  |
 | Write Function to Clear Previous Output | H | 2.5hrs|  |  |
 | POST MVP: Style Random Quote Button | L | 1hrs|  |  |
 | POSTMVP: Style Quotes | L | 2hrs|  |  |
