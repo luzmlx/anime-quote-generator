@@ -79,9 +79,9 @@ const getAnimeData = (quoteArray) => {
   }
 }
 // when search remove last
-// function remove() {
-//   while (randomQuote.lastChild) {
-//     randomQuote.removeChild(randomQuote.lastChild)
+// function QuoteDiv(element) {
+//   while (element.lastChild) {
+//     element.removeChild(element.lastChild)
 //   }
 // }
 
@@ -92,7 +92,15 @@ form.addEventListener('submit', (e) => {
   e.preventDefault()
   const searchValue = document.querySelector('input').value
   inputCharacterName(searchValue)
+ 
 })
+
+let element = document.getElementById
+function removeData(data) {
+  while (data.lastChild) {
+    data.removeChild(data.lastChild)
+  }
+}
 
 
 
