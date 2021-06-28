@@ -85,14 +85,14 @@ https://ibb.co/ck9Fdv3
 | Axios/Rendering | H | 2hrs| 5hrs | 5hrs |
 | Media Query | H | 2hrs| 5hrs | 5hrs |
 | Working with API | H | 3hrs| 6hrs | 6hrs |
-| Advanced Styling | H | 1.5hrs| 2hrs | 2hrs |
+| Advanced Styling | H | 1.5hrs|  |  |
 | Add Images to Webpage | H | 2hrs| 1hr | 1hr |
 | Render Quotes by Character Name | H | 3hrs| 3.5hrs | 3.5hrs |
 | Create Functional Search Button | H | 2hrs| 3hrs | 3hrs |
 | Write Function to Clear Previous Output | H | 2.5hrs| 4hrs | 4hrs |
 | POST MVP: Style Random Quote Button | L | 1hrs| 1hr | 1hr |
 | POSTMVP: Style Quotes | L | 2hrs| N/A |
-| Total | H | 33hrs| 46hrs | 48hrs |
+| Total | H | 33hrs| 46hrs | 46hrs |
 
 ## Code Snippet
 I know it's a very simple code but this, along with appending to the DOM and the media query were my main struggles. This was the last part of my MVP as I had everything else in tact. But once I was able to figure out this code and where to place the removeRandomSearch function, I felt so much joy. I can say that I now understand how the remove function works. It's a bit easier when applying it to the search bar, but when it came to the random quote button, I had to place it in a specific spot in order for it to work. 
