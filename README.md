@@ -1,9 +1,9 @@
 # anime-quote-generator
 # Project Overview
 
-## Anime Quote Generator
+## Project Name
 
-https://luzmlx.github.io/anime-quote-generator
+Anime Quote Generator
 
 ## Project Description
 
