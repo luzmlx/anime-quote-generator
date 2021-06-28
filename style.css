@@ -52,7 +52,11 @@ section {
   top: 50px;
 
 }
-
+button {
+  cursor: pointer;
+  background-color: #EAADEA; 
+  color:whitesmoke;
+}
 
 footer {
   width: auto;
