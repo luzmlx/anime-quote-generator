@@ -1,16 +1,10 @@
-// When button is clicked, a random quote pops up
-// Remove previous quotes
-// When a character name is searched, quote pops up
-// Make Sure Previous Quotes are removed
-// 
+
 
 const URL = 'https://animechan.vercel.app/api/random'
-// const searchURL = `https://animechan.vercel.app/api/quotes/character?name=`
 
 let characterSearch = document.querySelector('#search-name')
 let randomSearch = document.querySelector('#random')
-// let input = document.querySelector('input')
-// let searchValue = input.value
+
 let form = document.querySelector('form')
 let section = document.querySelector('section')
 
@@ -18,12 +12,14 @@ const randomQuote = async () => {
   try {
     const response = await axios.get(`${URL}`)
     console.log(response)
+    removeRandomSearch(section)
     // createQuoteDiv
     let quoteDiv = document.createElement('div')
     section.append(quoteDiv)
     // Append QuoteDiv to section
     const anime = document.createElement('p')
     anime.textContent = `Anime: ${response.data.anime}`
+    
     // Append anime to QuoteDiv
     quoteDiv.append(anime)
 
@@ -36,11 +32,12 @@ const randomQuote = async () => {
     const getAnimeQuote = document.createElement('p')
     getAnimeQuote.textContent = `"${response.data.quote}"`
     quoteDiv.append(getAnimeQuote)
-   
     
     return response
+     
   } catch (error) {
     console.error(error)
+    
 }
 };
 
@@ -52,9 +49,9 @@ const inputCharacterName = async (searchValue) => {
   console.log(searchValue)
   try {
    const response = await axios.get(`https://animechan.vercel.app/api/quotes/character?name=${searchValue}`)
-    console.log(response)
-    getAnimeData(response.data)
-   
+    console.log(response);
+    getAnimeData(response.data);
+    
    
     return response
   } catch (error) {
@@ -79,28 +76,44 @@ const getAnimeData = (quoteArray) => {
   }
 }
 // when search remove last
-// function QuoteDiv(element) {
-//   while (element.lastChild) {
-//     element.removeChild(element.lastChild)
-//   }
-// }
+
 
 
 
 randomSearch.addEventListener('click', randomQuote)
+
+
 form.addEventListener('submit', (e) => {
   e.preventDefault()
   const searchValue = document.querySelector('input').value
   inputCharacterName(searchValue)
- 
+  removeQuotes(section)
+  document.querySelector('input').value = ''
+
 })
 
-let element = document.getElementById
-function removeData(data) {
-  while (data.lastChild) {
-    data.removeChild(data.lastChild)
+
+function removeQuotes(quoteArray) {
+  while (quoteArray.lastChild) {
+    quoteArray.removeChild(quoteArray.lastChild)
+  }
+}
+function removeRandomSearch(response) {
+  while (response.lastChild) {
+    response.removeChild(response.lastChild)
   }
 }
 
+// const removeRandom = document.gretElementByTagName(response)
+// removeRandom.removeChild(removeRandom.childNodes[0])
+// const parent = quoteArray[i].data;
+// parent.removeChild(parent.getElementsByTagName('p')[0])
+
+// let element = document.getElementsByTagName('div')
+// function removeData(element) {
+//   while (element.lastChild) {
+//     section.removeChild(element.lastChild)
+//   }
+// }
 
 
