@@ -3,7 +3,7 @@
 
 ## Anime Quote Generator
 
-https://luzmlx.github.io/anime-quote-generator/
+[Anime Quote Generator](https://luzmlx.github.io/anime-quote-generator/)
 
 ## Project Description
 
