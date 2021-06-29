@@ -75,7 +75,7 @@ const getAnimeData = (quoteArray) => {
     quoteDiv.append(characterQuote)
   }
 }
-// when search remove last
+
 
 
 
@@ -104,16 +104,6 @@ function removeRandomSearch(response) {
   }
 }
 
-// const removeRandom = document.gretElementByTagName(response)
-// removeRandom.removeChild(removeRandom.childNodes[0])
-// const parent = quoteArray[i].data;
-// parent.removeChild(parent.getElementsByTagName('p')[0])
 
-// let element = document.getElementsByTagName('div')
-// function removeData(element) {
-//   while (element.lastChild) {
-//     section.removeChild(element.lastChild)
-//   }
-// }
 
 
